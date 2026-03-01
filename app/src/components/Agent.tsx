@@ -8,8 +8,8 @@ export default function Agent() {
     <section id="agent" className="relative bg-debut-navy">
       <div className="h-1 bg-debut-gold" />
 
-      <div className="max-w-6xl mx-auto px-6 py-24 md:py-32">
-        <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-12 lg:gap-16 items-start">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 md:py-32">
+        <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-10 sm:gap-12 lg:gap-16 items-start">
           {/* Left Column — Photo */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -17,16 +17,17 @@ export default function Agent() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7 }}
           >
-            <div className="relative aspect-[3/4] rounded-lg overflow-hidden ring-2 ring-debut-gold/30 ring-offset-4 ring-offset-debut-navy">
+            <div className="relative aspect-[4/3] sm:aspect-[3/4] max-w-sm mx-auto lg:max-w-none rounded-lg overflow-hidden ring-2 ring-debut-gold/30 ring-offset-4 ring-offset-debut-navy">
               <Image
                 src="/michael-tait.jpg"
                 alt="Michael Tait, Principal Agent at Debut Football"
                 fill
+                sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 40vw"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-debut-navy/30 to-transparent" />
             </div>
-            <p className="font-body font-medium text-xs tracking-[0.08em] uppercase text-white/45 mt-3">
+            <p className="font-body font-medium text-xs tracking-[0.08em] uppercase text-white/45 mt-3 text-center lg:text-left">
               Michael Tait — Principal Agent
             </p>
           </motion.div>
@@ -41,19 +42,19 @@ export default function Agent() {
             <p className="font-body font-medium text-[11px] tracking-[0.14em] uppercase text-debut-gold mb-3">
               Principal Agent
             </p>
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-[1.2] mb-8">
+            <h2 className="font-heading font-bold text-[26px] sm:text-3xl md:text-4xl text-white leading-[1.2] mb-6 sm:mb-8">
               Meet Michael Tait
             </h2>
 
-            <div className="space-y-5">
-              <p className="font-body text-base text-white/75 leading-[1.75]">
+            <div className="space-y-4 sm:space-y-5">
+              <p className="font-body text-[15px] sm:text-base text-white/75 leading-[1.75]">
                 Michael Tait is the founder and principal agent of Debut
                 Football. He is a FIFA Licensed Football Agent with an LLM
                 (Master&apos;s) in International Sports Law, giving him
                 specialized expertise in the regulations, contracts, and
                 disputes that shape professional football careers.
               </p>
-              <p className="font-body text-base text-white/75 leading-[1.75]">
+              <p className="font-body text-[15px] sm:text-base text-white/75 leading-[1.75]">
                 Before founding Debut, Michael trained at Bichara e Motta
                 Advogados, one of South America&apos;s leading sports law firms.
                 There, he worked alongside legal teams handling cases for elite
@@ -62,13 +63,13 @@ export default function Agent() {
                 firsthand understanding of how contracts are structured,
                 challenged, and enforced at the highest levels of the game.
               </p>
-              <p className="font-body text-base text-white/75 leading-[1.75]">
+              <p className="font-body text-[15px] sm:text-base text-white/75 leading-[1.75]">
                 Michael lectures in International Football Business at UCFB, one
                 of the world&apos;s premier institutions for football business
                 education. He doesn&apos;t just understand how the industry
                 works. He teaches it.
               </p>
-              <p className="font-body text-base text-white/75 leading-[1.75]">
+              <p className="font-body text-[15px] sm:text-base text-white/75 leading-[1.75]">
                 His focus is clear: identify talented players in North America,
                 represent them with integrity, and connect them to professional
                 opportunities in MLS, CPL, USL, and across Europe. He has
@@ -76,7 +77,7 @@ export default function Agent() {
                 European clubs and negotiated first professional contracts for
                 young athletes at a critical point in their careers.
               </p>
-              <p className="font-body text-base text-white/75 leading-[1.75]">
+              <p className="font-body text-[15px] sm:text-base text-white/75 leading-[1.75]">
                 Michael holds active relationships with clubs, scouts, and
                 sporting directors across North America, Europe, and South
                 America.
@@ -84,16 +85,16 @@ export default function Agent() {
             </div>
 
             {/* Credentials Bar */}
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 py-4 my-8 border-t border-b border-debut-gold/20 bg-debut-gold/[0.08]">
-              <span className="font-body font-medium text-xs tracking-[0.10em] uppercase text-debut-gold">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-2 sm:gap-x-6 sm:gap-y-2 py-4 px-4 sm:px-0 my-6 sm:my-8 border-t border-b border-debut-gold/20 bg-debut-gold/[0.08]">
+              <span className="font-body font-medium text-[11px] sm:text-xs tracking-[0.10em] uppercase text-debut-gold">
                 FIFA Licensed Football Agent
               </span>
-              <span className="text-debut-gold/30">|</span>
-              <span className="font-body font-medium text-xs tracking-[0.10em] uppercase text-debut-gold">
+              <span className="text-debut-gold/30 hidden sm:inline">|</span>
+              <span className="font-body font-medium text-[11px] sm:text-xs tracking-[0.10em] uppercase text-debut-gold">
                 LLM, International Sports Law
               </span>
               <span className="text-debut-gold/30 hidden sm:inline">|</span>
-              <span className="font-body font-medium text-xs tracking-[0.10em] uppercase text-debut-gold">
+              <span className="font-body font-medium text-[11px] sm:text-xs tracking-[0.10em] uppercase text-debut-gold">
                 UCFB Lecturer
               </span>
             </div>
@@ -103,7 +104,7 @@ export default function Agent() {
               href="https://www.linkedin.com/in/michaeltaitllm/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-white/60 hover:text-white font-medium text-sm transition-colors duration-150 hover:underline"
+              className="inline-flex items-center gap-2 text-white/60 hover:text-white font-medium text-sm transition-colors duration-150 hover:underline min-h-[44px]"
             >
               <svg
                 width="14"

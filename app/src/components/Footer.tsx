@@ -12,9 +12,9 @@ const navLinks = [
 export default function Footer() {
   return (
     <footer className="bg-debut-navy border-t-4 border-debut-gold">
-      <div className="max-w-6xl mx-auto px-6 py-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         {/* Row 1 — Three Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-12">
           {/* Left — Logo + Cities */}
           <div>
             <Image
@@ -22,20 +22,20 @@ export default function Footer() {
               alt="Debut Football"
               width={100}
               height={33}
-              className="h-8 w-auto mb-3"
+              className="h-7 sm:h-8 w-auto mb-3"
             />
-            <p className="font-body text-xs tracking-[0.06em] text-white/35 mt-2">
+            <p className="font-body text-[11px] sm:text-xs tracking-[0.06em] text-white/35 mt-2">
               Toronto | Miami | Barcelona | London
             </p>
           </div>
 
           {/* Center — Nav Links */}
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-row sm:flex-col flex-wrap gap-x-6 gap-y-2 sm:gap-3">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-white/50 hover:text-white text-sm font-medium transition-colors duration-150"
+                className="text-white/50 hover:text-white text-sm font-medium transition-colors duration-150 min-h-[44px] sm:min-h-0 inline-flex items-center"
               >
                 {link.label}
               </a>
@@ -43,15 +43,15 @@ export default function Footer() {
           </div>
 
           {/* Right — Social + FIFA Badge */}
-          <div className="flex flex-col items-start md:items-end gap-4">
+          <div className="flex flex-col items-start sm:col-span-2 md:col-span-1 md:items-end gap-4">
             {/* Social Icons */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-5 sm:gap-4">
               {/* LinkedIn */}
               <a
                 href="https://www.linkedin.com/in/michaeltaitllm/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/40 hover:text-debut-gold transition-colors duration-150"
+                className="text-white/40 hover:text-debut-gold transition-colors duration-150 p-2 -m-2"
                 aria-label="LinkedIn"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -61,7 +61,7 @@ export default function Footer() {
               {/* X/Twitter */}
               <a
                 href="#"
-                className="text-white/40 hover:text-debut-gold transition-colors duration-150"
+                className="text-white/40 hover:text-debut-gold transition-colors duration-150 p-2 -m-2"
                 aria-label="X (Twitter)"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -71,7 +71,7 @@ export default function Footer() {
               {/* Instagram */}
               <a
                 href="#"
-                className="text-white/40 hover:text-debut-gold transition-colors duration-150"
+                className="text-white/40 hover:text-debut-gold transition-colors duration-150 p-2 -m-2"
                 aria-label="Instagram"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -90,17 +90,17 @@ export default function Footer() {
         </div>
 
         {/* Separator */}
-        <div className="h-px bg-white/[0.08] my-10" />
+        <div className="h-px bg-white/[0.08] my-8 sm:my-10" />
 
         {/* Row 2 — Bottom */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/30 font-body">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-[11px] sm:text-xs text-white/30 font-body">
           <p>&copy; 2026 Debut Football. All rights reserved.</p>
           <div className="flex items-center gap-4">
-            <a href="#" className="hover:text-white/50 transition-colors duration-150">
+            <a href="#" className="hover:text-white/50 transition-colors duration-150 min-h-[44px] sm:min-h-0 inline-flex items-center">
               Privacy Policy
             </a>
             <span>|</span>
-            <a href="#" className="hover:text-white/50 transition-colors duration-150">
+            <a href="#" className="hover:text-white/50 transition-colors duration-150 min-h-[44px] sm:min-h-0 inline-flex items-center">
               Terms of Service
             </a>
           </div>

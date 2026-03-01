@@ -16,7 +16,7 @@ export default function Navigation() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-debut-navy border-b border-debut-navy-mid h-[72px]">
-      <div className="max-w-6xl mx-auto px-6 h-full flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-full flex items-center justify-between">
         {/* Logo */}
         <a href="#home" className="flex-shrink-0">
           <Image
@@ -24,7 +24,7 @@ export default function Navigation() {
             alt="Debut Football"
             width={120}
             height={40}
-            className="h-10 w-auto"
+            className="h-8 sm:h-10 w-auto"
             priority
           />
         </a>
@@ -51,7 +51,7 @@ export default function Navigation() {
         {/* Mobile Hamburger */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden flex flex-col gap-1.5 p-2"
+          className="md:hidden flex flex-col gap-1.5 p-3 -mr-1 min-w-[44px] min-h-[44px] items-center justify-center"
           aria-label="Toggle menu"
         >
           <span

@@ -32,18 +32,18 @@ const steps = [
 export default function Process() {
   return (
     <section id="process" className="relative bg-debut-navy">
-      <div className="max-w-6xl mx-auto px-6 py-24 md:py-32">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 md:py-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7 }}
-          className="mb-12"
+          className="mb-8 sm:mb-12"
         >
           <p className="font-body font-medium text-[11px] tracking-[0.14em] uppercase text-debut-gold mb-3">
             The Process
           </p>
-          <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-[1.2]">
+          <h2 className="font-heading font-bold text-[26px] sm:text-3xl md:text-4xl text-white leading-[1.2]">
             How It Works
           </h2>
         </motion.div>
@@ -56,16 +56,16 @@ export default function Process() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
-              className="flex flex-col md:flex-row items-start gap-6 md:gap-12 py-10 border-b border-white/[0.06] last:border-b-0"
+              className="flex flex-col sm:flex-row items-start gap-3 sm:gap-8 md:gap-12 py-7 sm:py-10 border-b border-white/[0.06] last:border-b-0"
             >
-              <span className="font-heading font-bold text-7xl md:text-[80px] text-debut-gold/[0.15] leading-none shrink-0 md:w-20">
+              <span className="font-heading font-bold text-5xl sm:text-7xl md:text-[80px] text-debut-gold/[0.15] leading-none shrink-0 sm:w-16 md:w-20">
                 {step.number}
               </span>
               <div className="flex-1">
-                <h3 className="font-body font-semibold text-xl text-white mb-2">
+                <h3 className="font-body font-semibold text-lg sm:text-xl text-white mb-1.5 sm:mb-2">
                   {step.title}
                 </h3>
-                <p className="font-body text-base text-white/65 leading-[1.7] max-w-[640px]">
+                <p className="font-body text-sm sm:text-base text-white/65 leading-[1.7] max-w-[640px]">
                   {step.description}
                 </p>
               </div>

@@ -55,7 +55,7 @@ export default function Parents() {
     <section id="parents" className="relative bg-debut-off-white">
       <div className="h-1 bg-debut-gold" />
 
-      <div className="max-w-6xl mx-auto px-6 py-24 md:py-32">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 md:py-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -66,8 +66,11 @@ export default function Parents() {
           <p className="font-body font-medium text-[11px] tracking-[0.14em] uppercase text-debut-gold mb-3">
             For Families
           </p>
-          <h2 className="font-heading font-bold text-3xl md:text-4xl text-debut-navy leading-[1.2]">
-            A Message for Parents and Families
+          <h2 className="font-heading font-bold text-[24px] sm:text-3xl md:text-4xl text-debut-navy leading-[1.2]">
+            A Message for Parents
+            <br className="sm:hidden" />
+            <span className="hidden sm:inline"> </span>
+            and Families
           </h2>
         </motion.div>
 
@@ -76,7 +79,7 @@ export default function Parents() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="font-body text-lg text-debut-text-body leading-[1.7] text-center max-w-[620px] mx-auto mb-6"
+          className="font-body text-base sm:text-lg text-debut-text-body leading-[1.7] text-center max-w-[620px] mx-auto mb-6"
         >
           We know this decision carries weight. Your child&apos;s future is on
           the line, and the football agent industry doesn&apos;t make it easy to
@@ -84,9 +87,9 @@ export default function Parents() {
         </motion.p>
 
         {/* Gold Rule */}
-        <div className="w-10 h-0.5 bg-debut-gold mx-auto mb-12" />
+        <div className="w-10 h-0.5 bg-debut-gold mx-auto mb-8 sm:mb-12" />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-0 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-12 gap-y-0 max-w-5xl mx-auto">
           {trustPoints.map((point, i) => (
             <motion.div
               key={i}
@@ -94,14 +97,14 @@ export default function Parents() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="flex items-start gap-4 py-6 border-b border-debut-border"
+              className="flex items-start gap-3 sm:gap-4 py-5 sm:py-6 border-b border-debut-border"
             >
               <GoldCheck />
               <div>
-                <p className="font-body font-semibold text-base text-debut-navy mb-1">
+                <p className="font-body font-semibold text-[15px] sm:text-base text-debut-navy mb-1">
                   {point.bold}
                 </p>
-                <p className="font-body text-[15px] text-debut-text-muted leading-[1.65]">
+                <p className="font-body text-sm sm:text-[15px] text-debut-text-muted leading-[1.65]">
                   {point.body}
                 </p>
               </div>
