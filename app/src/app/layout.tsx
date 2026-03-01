@@ -28,6 +28,9 @@ export const metadata: Metadata = {
     "North American players Europe",
     "international football agent",
     "player representation MLS",
+    "Canadian football agent",
+    "soccer agent overseas placement",
+    "first professional contract",
   ],
   openGraph: {
     title: "Debut Football | FIFA Licensed Football Agent",
@@ -35,6 +38,16 @@ export const metadata: Metadata = {
       "From First Contract to First Team. Representing emerging players from North America on the path to professional careers overseas.",
     type: "website",
     locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Debut Football | FIFA Licensed Football Agent",
+    description:
+      "From First Contract to First Team. Representing emerging players from North America on the path to professional careers overseas.",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
