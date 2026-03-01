@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -9,7 +10,7 @@ export default function About() {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24 md:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-8 sm:gap-12 lg:gap-16">
-          {/* Left Column — Label + Headline */}
+          {/* Left Column — Label + Headline + Image */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -19,11 +20,21 @@ export default function About() {
             <p className="font-body font-medium text-[11px] tracking-[0.14em] uppercase text-debut-accent mb-3">
               The Approach
             </p>
-            <h2 className="font-heading font-bold text-[26px] sm:text-3xl md:text-4xl text-debut-navy leading-[1.2]">
+            <h2 className="font-heading font-bold text-[26px] sm:text-3xl md:text-4xl text-debut-navy leading-[1.2] mb-8">
               Built Around the Player.
               <br />
               Not the Deal.
             </h2>
+            <div className="relative rounded-lg overflow-hidden">
+              <Image
+                src="/aboutsection.png"
+                alt="Football training session on the pitch"
+                width={600}
+                height={400}
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="w-full h-auto object-cover rounded-lg"
+              />
+            </div>
           </motion.div>
 
           {/* Right Column — Body Copy (condensed) */}

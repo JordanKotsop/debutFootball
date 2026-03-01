@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const cities = [
   {
@@ -75,6 +76,26 @@ export default function Cities() {
         >
           Being where the opportunities are.
         </motion.p>
+
+        {/* Section Image */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="mt-10 sm:mt-14"
+        >
+          <div className="relative rounded-lg overflow-hidden">
+            <Image
+              src="/globalreach.png"
+              alt="International football connections across four cities"
+              width={1200}
+              height={500}
+              sizes="(max-width: 768px) 100vw, 1100px"
+              className="w-full h-auto object-cover rounded-lg"
+            />
+          </div>
+        </motion.div>
       </div>
     </section>
   );

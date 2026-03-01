@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const trustPoints = [
   {
@@ -85,8 +86,25 @@ export default function Parents() {
           us looks like.
         </motion.p>
 
-        {/* Divider */}
-        <div className="w-10 h-0.5 bg-debut-accent mx-auto mb-8 sm:mb-12" />
+        {/* Section Image */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="max-w-3xl mx-auto mb-10 sm:mb-14"
+        >
+          <div className="relative rounded-lg overflow-hidden">
+            <Image
+              src="/forparents.png"
+              alt="Young player with family on the football pitch"
+              width={900}
+              height={500}
+              sizes="(max-width: 768px) 100vw, 750px"
+              className="w-full h-auto object-cover rounded-lg"
+            />
+          </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-12 gap-y-0 max-w-5xl mx-auto">
           {trustPoints.map((point, i) => (
