@@ -5,13 +5,15 @@
   --color-debut-navy-mid: #1A2272;
   --color-debut-navy-light: #252E7A;
   --color-debut-slate: #2C3E6B;
-  --color-debut-off-white: #F5F4F0;
-  --color-debut-gold: #C4993F;
-  --color-debut-gold-light: #D4AD5A;
-  --color-debut-gold-muted: #A07C2E;
+  --color-debut-white: #FFFFFF;
+  --color-debut-off-white: #F8F8F8;
+  --color-debut-warm: #F2F1ED;
+  --color-debut-accent: #1B6B5A;
+  --color-debut-accent-light: #238C75;
+  --color-debut-accent-muted: #145A4B;
   --color-debut-text-body: #1C1C2E;
   --color-debut-text-muted: #6B7280;
-  --color-debut-border: #E5E3DC;
+  --color-debut-border: #E5E5E5;
 
   --font-heading: "Playfair Display", Georgia, serif;
   --font-body: "Inter", system-ui, sans-serif;
@@ -23,14 +25,14 @@ html {
 }
 
 body {
-  background: var(--color-debut-navy);
-  color: #ffffff;
+  background: #ffffff;
+  color: var(--color-debut-text-body);
   font-family: var(--font-body);
   overflow-x: hidden;
   -webkit-text-size-adjust: 100%;
 }
 
 ::selection {
-  background: rgba(196, 153, 63, 0.3);
-  color: #ffffff;
+  background: rgba(27, 107, 90, 0.2);
+  color: var(--color-debut-text-body);
 }
